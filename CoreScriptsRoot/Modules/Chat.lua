@@ -302,7 +302,7 @@ do
   local function GetNameValue(pName)
     local value = 0
     for index = 1, #pName do
-      local cValue = string.byte(string.sub(pName, index, index))
+      local cValue = string.byte(pName, index)
       local reverseIndex = #pName - index + 1
       if #pName%2 == 1 then
         reverseIndex = reverseIndex - 1
